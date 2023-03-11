@@ -8,7 +8,7 @@ app=Flask("Brain Stroke Prediction")
 model=joblib.load('Stroke.h5')
 @app.route("/")
 def home():
-     return render_template('home.html')
+     return render_template('index.html')
 @app.route("/output", methods=['GET'])
 def output():
     if request.method=='GET':
